@@ -111,12 +111,14 @@ void UpdateFrame(void)
 	Matrix3 ViewMat = CameraTransform.GetViewMatirx();
 	
 	g_ShaderMatrix =  ViewMat * ModelMat;
+	
+	float Crosslength = (float)g_nClientWidth * (float)g_nClientWidth + (float)g_nClientHeight * (float)g_nClientHeight;
 
 	//Axis Draw
-	Vector3 XStart((float)g_nClientWidth * -0.8f + camLocation.X, 0.0f, 1.0f);
-	Vector3 XEnd((float)g_nClientWidth * 0.8f + camLocation.X, 0.0f, 1.0f);
-	Vector3 YStart(0.0f, (float)g_nClientHeight * 0.8f + camLocation.Y, 1.0f);
-	Vector3 YEnd(0.0f, (float)g_nClientHeight *-0.8f + camLocation.Y, 1.0f);
+	Vector3 XStart(sqrt(Crosslength) * -0.5f + camLocation.X, 0.0f, 1.0f);
+	Vector3 XEnd(sqrt(Crosslength) * 0.5f + camLocation.X, 0.0f, 1.0f);
+	Vector3 YStart(0.0f, sqrt(Crosslength) * 0.5f + camLocation.Y, 1.0f);
+	Vector3 YEnd(0.0f, sqrt(Crosslength) *-0.5f + camLocation.Y, 1.0f);
 
 	SetColor(255.0f, 0.0f, 0.0f);
 	DrawLine(XStart*ViewMat, XEnd*ViewMat);
