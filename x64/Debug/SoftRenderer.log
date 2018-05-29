@@ -1,3 +1,6 @@
-﻿  Renderer.cpp
-c:\users\user\downloads\softrenderer-master\softrenderer-master\renderer.cpp(121): warning C4244: '인수': 'float'에서 'BYTE'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  SoftRenderer.vcxproj -> C:\Users\user\Downloads\SoftRenderer-master\SoftRenderer-master\x64\Debug\SoftRenderer.exe
+﻿  GDIHelper.cpp
+  Renderer.cpp
+c:\users\shebi\downloads\2018-class-third-master\2018-class-third-master\renderer.cpp(121): warning C4244: '인수': 'float'에서 'BYTE'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SoftRenderer.cpp
+  코드를 생성하고 있습니다...
+  SoftRenderer.vcxproj -> C:\Users\shebi\Downloads\2018-class-third-master\2018-class-third-master\x64\Debug\SoftRenderer.exe
